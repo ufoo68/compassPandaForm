@@ -1,24 +1,21 @@
-window.onload = function (e) {
-    liff.init(function (data) {
+window.onload = (e) => {
+    liff.init( (data) => {
         initializeApp(data);
     });
 };
 
 function initializeApp(data) {
-
     // sendMessages call
     document.getElementById('sendmessagebutton').addEventListener('click', function () {
+        const textMessage = document.getElementById('timestamp').value + ':' + document.getElementById('body').value;
         liff.sendMessages([{
             type: 'text',
-            text: "You've successfully sent a message! Hooray!"
-        }, {
-            type: 'sticker',
-            packageId: '2',
-            stickerId: '144'
-        }]).then(function () {
-            window.alert("Message sent");
-        }).catch(function (error) {
-            window.alert("Error sending message: " + error);
+            text: textMessage
+        }]).then( () => {
+            window.alert("呟いたよ");
+            liff.closeWindow();
+        }).catch( () => {
+            window.alert("呟きに失敗したよ");
         });
     });
 }
