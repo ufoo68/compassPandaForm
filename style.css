@@ -43,3 +43,7 @@ img {
 button {
     margin: 5px;
 }
+
+.label {
+    text-align: left;
+}
