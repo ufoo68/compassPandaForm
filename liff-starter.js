@@ -13,9 +13,9 @@ function initializeApp(data) {
             text: textMessage
         }]).then( () => {
             window.alert("呟いたよ");
-            liff.closeWindow();
         }).catch( () => {
             window.alert("呟きに失敗したよ");
         });
+        liff.closeWindow();
     });
 }
