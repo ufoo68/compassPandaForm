@@ -2,20 +2,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>呟き用フォーム</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
-    <div>
-        <form class="div">
-            <div>タイムスタンプを入力してね</div>
-            <input type="text" size="50" id="timestamp">
-            </p>
-            <div>呟きたいことを書いてね</div>
-            <textarea rows="10" cols="50" id="body"></textarea>
-            <div class="button">
-                <button id="sendmessagebutton">送信</button>
+    <div class="container">
+        <form>
+            <div class="form-group">
+            <label>タイムスタンプを入力してね</label>
+                <div class="row"><input type="text" id="timestamp" class="form-control"></div>
+            <label>呟きたいことを書いてね</div>
+                <div class="row"><textarea rows="10" id="body" class="form-control"></textarea></div>      
+                <div class="row"><button id="sendmessagebutton" class="btn btn-primary button">送信</button></div>
             </div>
-            </p>
         </form>
     </div>
     <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
