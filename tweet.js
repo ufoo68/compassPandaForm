@@ -8,13 +8,15 @@ function initializeApp(data) {
     // sendMessages call
     document.getElementById('sendmessagebutton').addEventListener('click', function () {
         const textMessage = document.getElementById('timestamp').value + ':' + document.getElementById('body').value;
-        liff.sendMessages([{
-            type: 'text',
-            text: textMessage
-        }]).then( () => {
-            liff.closeWindow();
-        }).catch( (error) => {
-            window.alert(error);
-        });
+        if (textMessage.length > 1) {
+            liff.sendMessages([{
+                type: 'text',
+                text: textMessage
+            }]).then( () => {
+                liff.closeWindow();
+            }).catch( (error) => {
+                //window.alert(error);
+            });
+        }
     });
 }
