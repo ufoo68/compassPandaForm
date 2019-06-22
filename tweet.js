@@ -13,7 +13,7 @@ function initializeApp(data) {
             text: textMessage
         }]).then( () => {
             liff.closeWindow();
-        }).catch(function () {
+        }).catch( () => {
             window.alert("呟いたよ");
         });
     });
