@@ -12,9 +12,9 @@ function initializeApp(data) {
             type: 'text',
             text: textMessage
         }]).then( () => {
-            window.alert("呟いたよ");
             liff.closeWindow();
         }).catch(function () {
+            window.alert("呟いたよ");
         });
     });
 }
