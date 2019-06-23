@@ -14,8 +14,8 @@ function initializeApp(data) {
                 text: textMessage
             }]).then( () => {
                 liff.closeWindow();
-            }).catch( (error) => {
-                //window.alert(error);
+            }).catch( () => {
+                window.alert("多分うまく送信できてないかも。。。");
             });
         }
     });
